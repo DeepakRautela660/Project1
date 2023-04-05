@@ -1,0 +1,195 @@
+﻿
+<div class="container" style="background-image:url('../img/login.jpg');background-size:cover;height:100%;
+    width: 100%;">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <div class="container" ng-app="homeapp" ng-controller="LoginController">
+
+        <div>
+           
+            @{
+                Html.RenderPartial("_ErrorLayout");
+            }
+        </div>
+
+
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 login-box">
+            <div class="panel panel-default">
+                <div class="panel-body" style="padding:0px;">
+                    <div class="row container-body">
+                        <div class="col-md-5 info-part">
+
+                            <p><span>Consilium</span><br />Licensing Module </p>
+
+                        </div>
+                        <div class="login-panel" style="border-style: solid; color: #7b8699;">
+                            <div class="main_logo pull-right" style="margin-right:10px;">
+
+                                <img src="~/img/image_Consilium.png" style=" height: 70px;" />
+                                <div class="name-heading"></div>
+                            </div>
+                            <div class="col-md-5 col-md-offset-1" style="margin-top:10%;">
+
+                                <form @*name="loginForm" class="form-horizontal" ng-submit="login()"*@>
+
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <div class="name-heading" style="color:rgb(40,53,147);font-weight:bold;">@*Sign In*@</div>
+                                        </div>
+                                    </div>
+                                    <!--<div class="form-group">
+                                        <div class="col-md-12">
+                                            <select name="UnidashboardModules" ng-model="loginData.UnidashboardModulesAccessibility" ng-init="loginData.UnidashboardModulesAccessibility='1'" style="height:36px!important" class="form-control">
+                                                <option value="1" ng-selected="true">All</option>
+                                                <option value="2">UniDashboard</option>
+                                                <option value="3">UniInsight</option>
+                                                <option value="4">TV Wallboard</option>
+                                            </select>
+                                        </div>
+                                    </div>-->
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input type="text" style="height:36px!important" class="form-control" placeholder="User ID" ng-model="loginData.UserID" />
+                                        </div>
+                                    </div>
+                                    <br />
+                                    <br />
+                                    <br />
+                                    <div class="form-group">
+                                        <div class="col-md-12">
+                                            <input type="password" style="height:36px!important" class="form-control" placeholder="Password" ng-model="loginData.Password" />
+                                        </div>
+                                    </div>
+
+                                    <br />
+                                    <br />
+
+                                    @*<div class="form-group">
+                                            <div class="col-md-12" ng-if="error != '' &&error != null">
+                                                <p style="height:36px;line-height:4px;font-size:11px;" class="alert alert-danger">{{error}}</p>
+                                            </div>
+                                        </div>*@
+
+                                    <div class="form-group">
+
+                                        <div class="col-md-6">
+
+                                            <button class="btn btn-info btn-block" value="{{btntext}}" ng-click="login()" style="height:36px!important" type="submit" @*ng-disabled="loading"*@>@*<span ng-if="loading==false"></span>*@Login@*<span ng-if="loading==true">Please Wait....</span>*@</button>
+                                        </div>
+                                        @*<div class="col-md-6" style="margin-top:4px;">
+                                                <span class="dashboard active" ui-sref="adminlogin"><a style="font-size:16px;margin-left:30px;color:rgb(40,53,147);font-weight:bold;" href="">Administration?<span></span></a></span>
+                                            </div>*@
+
+                                    </div>
+                                    @*<div class="form-group">
+                                            <div class="col-md-12">
+                                                <div class="loadingBar" style="margin-top:2%;" ng-if="loading==true">
+                                                    <img src="../img/103.gif" />
+                                                </div>
+                                            </div>
+                                        </div>*@
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                    <script src="~/Scripts/angular.min.js"></script>
+                    <script src="~/Scripts/Angularcontroller.js"></script>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-2">
+        </div>
+
+
+        <div class="footer pull-right" style="margin-top:23%;margin-right:-30%;">
+            <p class="botto-text">2023 Consilium Software Inc ( V8.1.234 )</p>
+        </div>
+
+    </div>
+</div>
+
+<style>
+
+    .botto-text {
+        color: #ffffff;
+        font-size: 18px;
+        margin-right: 600px;
+    }
+
+    .main_logo img {
+        height: 47px;
+        background-color: #fff;
+    }
+
+    .name-heading {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .alert h3 {
+        text-align: center;
+    }
+
+    .main_logo h3 {
+        text-align: center;
+        margin-bottom: 0px;
+    }
+
+    .login-box {
+        height: 400px;
+        margin-top: 20%;
+        margin-left: 4%;
+    }
+
+    .info-part {
+        background-color: rgba(79,147,225,.9);
+        color: #fff;
+        align-items: center;
+        min-height: 30em !important;
+        margin: 0;
+        height: 320px;
+    }
+
+        .info-part p {
+            text-align: center;
+            margin-top: 5.5em;
+            font-size: 2.2em;
+        }
+
+    .login-part {
+        margin-top: 30px;
+    }
+
+    .panel {
+        border: none !important;
+    }
+
+    .login-text {
+        margin-top: 20px;
+    }
+
+    .container-body {
+        min-height: 23em;
+    }
+
+    .login-panel {
+        background-color: #ffffff;
+        min-height: 30em;
+    }
+
+    .custom-logo-login {
+        width: 107px;
+        max-height: 59px;
+        margin-top: 5px;
+        margin-left: 21px;
+    }
+
+    .login-alert {
+        padding: 0px !important;
+        margin-bottom: 0px !important;
+    }
+</style>
